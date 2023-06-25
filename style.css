@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 :root {
-  --main-bg-color: #e2e8f0;
-  --sidebar-bg-color: #1992d4;
-  --accent-bg-color: #ffffff;
+  --main-bg-color: #14213d;
+  --sidebar-bg-color: #fca311;
+  --accent-bg-color: #f5f5f5;
   --text-side-color: #ffffff;
-  --text-color: #333333;
+  --text-color: #000;
 }
 
 * {
@@ -19,13 +19,13 @@ html {
   font-family: "Roboto", sans-serif;
 }
 
-.header,
 .content {
   background-color: var(--accent-bg-color);
 }
 
-.sidebar {
-  background-color: var(--sidebar-bg-color);
+.content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .grid-container {
@@ -34,5 +34,91 @@ html {
   height: 100%;
   padding: 16px;
   box-sizing: border-box;
-  grid-template-columns: ;
+  grid-template-columns: 300px 4fr;
+  grid-template-rows: 150px 4fr;
 }
+
+.header {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  align-items: center;
+}
+
+.header > .profile-menu,
+.post-menu {
+  justify-self: center;
+  padding: 1rem;
+}
+
+.header > .profile,
+.search-bar {
+  padding: 1rem;
+  justify-self: start;
+}
+
+.info {
+  display: grid;
+  grid-column: -2 / -1;
+  grid-row: 1 / span 2;
+}
+
+.project {
+  display: grid;
+  gap: 5px;
+}
+
+.project,
+.announce,
+.trending {
+  background-color: white;
+  background-clip: content-box;
+}
+
+.announce,
+.trending {
+  display: grid;
+  min-height: 300px;
+  padding: 1rem;
+  background-clip: padding-box;
+}
+
+.project,
+.info {
+  align-items: center;
+  padding: 16px;
+}
+
+.sidebar {
+  background-color: var(--sidebar-bg-color);
+  display: grid;
+  grid-column: 1 / 2;
+  grid-row: 1 / span 2;
+  align-items: center;
+  grid-template-rows: 1fr 2fr 2fr;
+}
+
+.sidebar > .side-logo {
+  align-self: start;
+  padding: 1rem;
+}
+
+.sidebar > .side-1,
+.side-2 {
+  align-self: start;
+  padding: 1rem;
+}
+
+/* ------- OUTLINE ------- */
+
+/* .header {
+  border: solid 1px red;
+}
+
+.sidebar {
+  border: solid 1px blue;
+}
+
+.project {
+  border: solid 1px green;
+} */
