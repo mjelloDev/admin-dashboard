@@ -121,6 +121,7 @@ html {
   border-radius: 50%;
   grid-row: 1 / -1;
   justify-self: center;
+  align-self: center;
 }
 
 .button-header {
@@ -209,10 +210,15 @@ html {
   font-size: 1rem;
 }
 
-.sidebar .side-1,
-.sidebar .side-2 {
+.sidebar .side-1 {
   align-self: start;
   font-size: 1.5rem;
+}
+
+.side-2 {
+  font-size: 1.5rem;
+  align-self: self-end;
+  margin-bottom: 20px;
 }
 
 .filter-white {
