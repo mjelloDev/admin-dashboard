@@ -22,6 +22,7 @@ html {
 
 .content {
   background-color: var(--accent-bg-color);
+  margin-top: 10px;
 }
 
 .content {
@@ -46,6 +47,8 @@ html {
   grid-template-columns: 3fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   align-items: center;
   padding: 8px;
+  min-height: 50px;
+  max-height: 100%;
 }
 
 .search-bar {
@@ -78,12 +81,12 @@ html {
 }
 
 .bell img {
-  max-width: 35%;
+  max-width: 35px;
 }
 
 .profile img {
   object-fit: fill;
-  max-width: 50%;
+  max-width: 50px;
   border-radius: 50%;
   border: 2px ridge var(--main-bg-color);
 }
@@ -124,7 +127,8 @@ html {
   background-color: var(--sidebar-bg-color);
   border: none;
   border-radius: 20px;
-  width: 80px;
+  width: 90px;
+  max-width: 80%;
   height: 2rem;
 }
 
