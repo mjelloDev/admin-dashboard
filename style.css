@@ -41,20 +41,49 @@ html {
 .header {
   background-color: white;
   display: grid;
-  grid-template-columns: 4fr 1fr;
+  grid-template-rows: 1fr 2fr;
+  grid-template-columns: 5fr 50px 50px 100px;
+  align-items: center;
+  padding: 1rem;
+}
+
+.search-bar {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 50px 2fr;
+  width: 80%;
+  margin-right: auto;
   align-items: center;
 }
 
-.header > .profile-menu,
-.post-menu {
-  justify-self: center;
-  padding: 1rem;
+.search-bar img {
+  max-width: 50%;
+  cursor: pointer;
 }
 
-.header > .profile,
-.search-bar {
-  padding: 1rem;
-  justify-self: start;
+.search-bar input {
+  height: 25px;
+  border-radius: 15px;
+  background-color: #f5f5f5;
+}
+
+.right-header {
+  grid-column: 2 / 4;
+}
+
+.profile-menu img {
+  max-width: 45%;
+}
+
+.profile img {
+  object-fit: fill;
+  max-width: 100%;
+  border-radius: 50%;
+  border: 2px ridge var(--main-bg-color);
+}
+
+.post-menu {
+  font-weight: bolder;
 }
 
 .info {
@@ -136,16 +165,3 @@ html {
   filter: invert(99%) sepia(82%) saturate(2%) hue-rotate(285deg)
     brightness(104%) contrast(100%);
 }
-/* ------- OUTLINE ------- */
-
-/* .header {
-  border: solid 1px red;
-}
-
-.sidebar {
-  border: solid 1px blue;
-}
-
-.project {
-  border: solid 1px green;
-} */
